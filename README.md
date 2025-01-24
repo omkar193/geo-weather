@@ -13,7 +13,7 @@ GeoWeather is a Spring Boot-based application that fetches weather information b
 8. [Error Handling](#error-handling)
 9. [Testing](#testing)
 10. [Docker Deployment](#docker-deployment)
-11. [License](#license)
+
 
 ## Features
 - Fetch weather data based on IP address.
@@ -69,11 +69,11 @@ spring.application.name=GeoWeather
 
 # Geolocation API Configuration
 geolocation.api.url=https://api.ipstack.com
-geolocation.api.key=<YOUR_GEOLOCATION_API_KEY>
+geolocation.api.key=dfabdf0f0b7102f0a1c09bb75236cfd0
 
 # Weather API Configuration
 weather.api.url=https://api.openweathermap.org/data/2.5/weather
-weather.api.key=<YOUR_WEATHER_API_KEY>
+weather.api.key=bc29ecc5f9f64a9ee8edb34e3bc64cb3
 
 # Caching (Caffeine Cache)
 spring.cache.cache-names=weatherCache
@@ -113,7 +113,7 @@ The application retries failed requests to the external APIs up to **3 times**, 
 Screenshot of test coverage:
 
 
-<img width="596" alt="Screenshot 2025-01-25 023626" src="https://github.com/user-attachments/assets/319394ac-e654-43e2-a3a4-eb10b3c3e06c" />
+<img width="591" alt="image" src="https://github.com/user-attachments/assets/40b18187-2778-40a9-8db7-cd632c12cfb2" />
 
 
 
