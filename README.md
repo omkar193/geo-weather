@@ -1,6 +1,6 @@
 # GeoWeather API
 
-GeoWeather is a Spring Boot-based application that fetches weather information based on the client's IP address. The application integrates two external APIs: a Geolocation API to determine the location of the client and a Weather API to provide real-time weather data for that location. The project uses Caffeine for caching, Resilience4j for rate limiting and retry mechanisms, and includes detailed logging.
+GeoWeather is an API that integrates two powerful external services to deliver real-time weather information based on a given IP address. If no IP address is provided, the API defaults to the client’s IP. It first uses a geolocation API to determine the location from the IP and then fetches the weather data from a weather service API. This seamless integration allows GeoWeather to provide accurate, location-based weather updates with minimal setup and hassle.
 
 ## Table of Contents
 1. [Features](#features)
