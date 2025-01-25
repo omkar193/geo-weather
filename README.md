@@ -187,3 +187,8 @@ The application includes a `Dockerfile` for containerized deployment. You can us
    ```
 
 This will start the GeoWeather application on port **8080**.
+
+---
+
+<p align="center">Thank you for checking out the GeoWeather project! 😊</p>
+
