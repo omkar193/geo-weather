@@ -26,14 +26,65 @@ GeoWeather is an API that integrates two powerful external services to deliver r
 
 ## API Endpoints
 
-### 1. **GET /api/weather-by-ip**
-- **Description:** Fetches weather details based on the provided IP address.
-- **Query Parameter:** `ip` (Optional) - IP address to get the weather information.
-- **Response:** JSON object containing the location and weather details.
-- **Error Codes:**
-  - `400 Bad Request`: Invalid IP address.
-  - `429 Too Many Requests`: Rate limit exceeded.
-  - `503 Service Unavailable`: External services are unavailable.
+### 1. `GET /api/weather-by-ip`
+**Description**: Fetches weather details based on the provided IP address. If no IP is given, it fetches the weather based on the client's IP.
+
+- **Query Parameter**: 
+  - `ip` (Optional) - IP address to get the weather information. If not provided, the API will use the client's IP.
+  
+- **Response**: JSON object containing the IP address, location (city, country), weather details (temperature, humidity, description), and any error messages.
+
+- **Error Codes**:
+  - **400 Bad Request**: Invalid IP address.
+  - **429 Too Many Requests**: Rate limit exceeded.
+  - **503 Service Unavailable**: External services are unavailable.
+
+#### Example 1: With IP parameter
+**Request**:
+```bash
+curl -X GET "http://localhost:8080/api/weather-by-ip?ip=8.8.8.8"
+```
+
+**Response**:
+```json
+{
+    "ip": "8.8.8.8",
+    "location": {
+        "city": "Glenmont",
+        "country": "United States"
+    },
+    "weather": {
+        "temperature": -5.86,
+        "humidity": 78,
+        "description": "scattered clouds"
+    },
+    "errorMessage": null
+}
+```
+
+#### Example 2: Without IP parameter
+**Request**:
+```bash
+curl -X GET "http://localhost:8080/api/weather-by-ip"
+```
+
+**Response**:
+```json
+{
+    "ip": "0:0:0:0:0:0:0:1",
+    "location": {
+        "city": "Ghazīpur",
+        "country": "India"
+    },
+    "weather": {
+        "temperature": 19.8,
+        "humidity": 33,
+        "description": "clear sky"
+    },
+    "errorMessage": null
+}
+```
+```
 
 ### Example:
 ```bash
