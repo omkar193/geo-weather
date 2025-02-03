@@ -91,8 +91,10 @@ curl -X GET "http://localhost:8080/api/weather-by-ip?ip=192.168.1.1"
 ```
 
 ## Rate Limiting
+- The **Token Bucket Algorithm** is used.
 - The application limits the number of requests to **5 per minute** per IP address.
 - If the limit is exceeded, a `429 Too Many Requests` response is returned.
+  
 
 ## Setup Instructions
 1. Clone the repository:
