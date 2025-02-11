@@ -1,6 +1,6 @@
-# GeoWeather API
+# GeoWeather
 
-GeoWeather is an API that integrates two powerful external services to deliver real-time weather information based on a given IP address. If no IP address is provided, the API defaults to the client’s IP. It first uses a geolocation API to determine the location from the IP and then fetches the weather data from a weather service API. This seamless integration allows GeoWeather to provide accurate, location-based weather updates with minimal setup and hassle.
+GeoWeather is a backend service that integrates two powerful external services to deliver real-time weather information based on a given IP address. If no IP address is provided, the API defaults to the client’s IP. It first uses a geolocation API to determine the location from the IP and then fetches the weather data from a weather service API. This seamless integration allows GeoWeather to provide accurate, location-based weather updates with minimal setup and hassle.
 
 ## Table of Contents
 1. [Features](#features)
